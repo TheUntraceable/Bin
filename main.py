@@ -421,6 +421,7 @@ async def on_ready():
   users= list(client.users)
   #{len(set(client.get_all_members()))}
   await client.change_presence(status=discord.Status.do_not_disturb, activity=discord.Activity(type=discord.ActivityType.watching, name=f"f!help | {str(len(users))} members in {str(len(servers))} servers" ))
+  print("READY")
 
 #@client.command(aliases= ["afkset", "setafk"])
 #@commands.cooldown(1, 21, commands.BucketType.user)

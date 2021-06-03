@@ -1,37 +1,14 @@
 import discord
 from discord.ext import commands
-import random
-import asyncio
-import json
-from discord import Embed
-from discord import utils
-from discord import Role, Member
-from discord.utils import get
-from datetime import datetime
 import os
-from PIL import Image,ImageDraw,ImageFont
-import requests
+from PIL import Image
 from io import BytesIO
-from discord.ext.commands import has_permissions, CheckFailure, bot_has_permissions
-from urllib import parse
-import asyncio
-from datetime import datetime, timedelta
 from discord.ext import commands
-from discord.ext.commands import BucketType, cooldown
-from PIL import Image, ImageOps, ImageFilter
 import os
 from io import BytesIO
-import cv2
-import numpy as np
-import math
-import random
-from wand.image import Image as swirler
-from http import client as http_client
-from urllib import parse as urllib_parse
 import aiohttp
 import os
 import sr_api
-import urllib.request
 
 
 client = sr_api.Client()

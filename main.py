@@ -9,6 +9,9 @@ from discord_slash import SlashCommand
 from datetime import datetime
 import requests
 import asyncpg
+from dotenv import load_dotenv
+
+load_dotenv()
 
 async def get_prefix(client, message):
     # with open('prefixes.json', 'r') as f:
@@ -31,7 +34,7 @@ slash = SlashCommand(client, sync_commands=True)
 client.bot = client
 
 async def connectPostgres():
-    client.db = await asyncpg.create_pool("postgres://uldcihim:OwgYRCLRvoHleKIMUkKEE1T0pPL1VIxH@pg877.novanodes.com/uldcihim",min_size=5,max_size=5)
+    client.db = await asyncpg.create_pool(os.environ.get("PG_URL"),min_size=5,max_size=5)
     print("connected to DB")
     await client.db.execute("CREATE TABLE IF NOT EXISTS prefixes(id bigint PRIMARY KEY,prefix text)")
     # await client.db.execute("DROP TABLE rrole")
@@ -1266,5 +1269,5 @@ async def wyr(ctx):
 
 response = requests.post(f'https://space-bot-list.xyz/api/bots/{489682676157120513}', headers = {"Authorization": "942292990d0fe954c70e539429ee8ac6e3cb55100bcfb798acb6b3046120c233f243b2417b6fe49e21303c2cac30860a", "Content-Type": "application/json"})
 
-my_secret = "ODM1OTIyMzk4MjYzMjQ2OTE5.YIWfZg.8ShqJmZIEUGqiJ7KF4qGPI8Etos"
+my_secret = os.environ.get("TOKEN")
 client.run(my_secret)

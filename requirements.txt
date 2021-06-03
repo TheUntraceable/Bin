@@ -64,16 +64,7 @@ olefile==0.44
 opencv-python==4.5.2.52
 ordered-set==4.0.2
 packaging==20.9
-pacman-mirrors==4.21.2
-paramiko==2.7.2
-passlib==1.7.4
-pbr==5.6.0
-pep517==0.10.0
 Pillow==4.2.1
-pipenv==2020.11.15
-ply==3.11
-progress==1.5
-protonvpn-cli==2.2.6
 prsaw==0.3.1
 psutil==5.8.0
 psycopg2==2.8.6
@@ -128,7 +119,6 @@ team==1.0
 termcolor==1.1.0
 testtools==2.4.0
 tldextract==2.1.0
-toml==0.10.2
 typing-extensions==3.7.4.3
 udiskie==2.3.3
 urllib3==1.22
